@@ -5,8 +5,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cv_randomizer_tracker"
         mc:Ignorable="d"
-        Title="CV tracker" Height="450" Width="800" >
-    <Grid>
-        
-    </Grid>
+        Title="CV tracker" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="4*"/>
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="5*"/>
+		</Grid.RowDefinitions>
+
+		<!-- logo -->
+		<Border CornerRadius="10 0 0 0" Grid.Column="0">
+			<Border.Background >
+				<SolidColorBrush Color="#A03366"/>
+			</Border.Background>
+
+		</Border>
+
+		<!-- Game selection -->
+		<Border CornerRadius="0 0 0 10" Grid.Column="0" Grid.Row="1">
+			<Border.Background >
+				<SolidColorBrush Color="#003366"/>
+			</Border.Background>
+
+			<StackPanel >
+				<StackPanel.Resources>
+					<Style TargetType="{x:Type Button}">
+						<Setter Property="Margin" Value="5,15,5,5"/>
+					</Style>
+				</StackPanel.Resources>
+
+				<Button Content="Home"/>
+				<Button Content="AoS" />
+				<Button Content="DoS" />
+				<Button Content="SotN" />
+				<Button Content="CotM" />
+				<Button Content="HoD" />
+			</StackPanel>
+
+		</Border>
+
+
+		<!-- Main screen -->
+		<Border CornerRadius="0 10 10 0" Grid.Column="1" Grid.RowSpan="2">
+			<Border.Background >
+				<SolidColorBrush Color="#B0E0E6"/>
+			</Border.Background>
+
+
+		</Border>
+
+
+	</Grid>
 </Window>
